@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="com.raquel.common.HelloWorld">
+		<property name="name" value="Raquel" />
+		<property name="personagem" ref="caracteristicasPersonagem" />
+	</bean>
+	<bean id="caracteristicasPersonagem" class="com.raquel.common.Personagem">
+		<property name="nomePersonagem" value="Raquel" />
+		<property name="generoPersonagem" value="Feminino" />
+	</bean>
+	<bean id="caracteristicasItem" class="com.raquel.common.Item">
+		<property name="nomeItem" value="Poção de HP fraca" />
+	</bean>
+	<bean id="caracteristicasSkill" class="com.raquel.common.Skill">
+		<property name="nomeSkill" value="Bola de Fogo" />
+	</bean>
+</beans>
